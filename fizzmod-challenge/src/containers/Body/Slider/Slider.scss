@@ -3,3 +3,16 @@
   margin: 0 auto;
   overflow: hidden;
 }
+
+.sliderContent {
+  //transform: translateX(100%);
+  transition: transform ease-out 0.5s;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+}

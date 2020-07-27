@@ -1,0 +1,87 @@
+@import "../../colorPalette.scss";
+
+.headerTop {
+  width: 100%;
+  display: flex;
+  .headerTopLeft {
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.headerTopRight {
+  width: 100%;
+}
+
+.cart {
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 256px;
+  height: 56px;
+  background-color: $fizzmod-darkest-grey;
+  color: $white;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .icon {
+    margin-right: 18px;
+    font-size: 20px;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 8px;
+}
+
+.navItem {
+  list-style: none;
+  display: inline-block;
+  font-size: 13px;
+  padding-right: 27px;
+
+  a {
+    text-decoration: none;
+    color: $fizzmod-green;
+  }
+}
+
+.headerSearch {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchBox {
+  border-top: 1px solid $fizzmod-light-grey;
+  width: 100%;
+  height: 56px;
+  color: $fizzmod-darkest-grey;
+  button {
+    text-decoration: none;
+    border: none;
+    background-color: $white;
+    color: $fizzmod-darkest-grey;
+    height: 100%;
+  }
+  button .searchIcon {
+    padding: 14px;
+    font-size: 23px;
+  }
+  input {
+    border: none;
+    //    height: 100%;
+    width: calc(100% - 65px);
+    font-size: 20px;
+    font-weight: normal;
+  }
+  input::placeholder {
+    color: $fizzmod-darkest-grey;
+    font-weight: normal;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Slider from "./Slider/Slider";
+import Productos from "./Productos/Productos";
 
 const Body = () => {
   const [slides, setSlides] = useState([]);
@@ -21,8 +22,8 @@ const Body = () => {
 
   return (
     <>
-      <h1>Body</h1>
       <Slider slides={slides}></Slider>
+      <Productos products={products}></Productos>
     </>
   );
 };

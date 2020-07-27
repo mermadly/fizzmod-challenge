@@ -1,0 +1,44 @@
+@import "../../colorPalette.scss";
+
+footer {
+  height: 320px;
+  background-color: $fizzmod-darkest-grey;
+  color: $white;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 200px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.footerInfo {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  h6 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 2px solid $white;
+    text-align: start;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+  }
+  ul li {
+    list-style: none;
+    padding: 5px 0;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  .icon {
+    color: $white;
+    font-size: 20px;
+  }
+}

@@ -1,13 +1,20 @@
 import React from "react";
+import "./Menu.scss";
 
 const Menu = (props) => {
   return (
-    <div>
-      {props.categorias.map((categoria) => {
+    <div className="categoriesContainer">
+      {props.categories.map((categorie) => {
         return (
-          <a className="link" href={categoria.href} key={categoria.title}>
-            {categoria.title}
-          </a>
+          <div className="categoryContainer">
+            <a
+              className="categoryTitles"
+              href={categorie.href}
+              key={categorie.title}
+            >
+              {categorie.title}
+            </a>
+          </div>
         );
       })}
     </div>

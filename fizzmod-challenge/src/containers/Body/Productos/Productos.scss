@@ -1,0 +1,63 @@
+@import "../../../colorPalette.scss";
+
+.productsMain {
+  //Se superpone con el footer
+  height: 120vh;
+}
+
+.discount {
+  background-color: $fizzmod-turquoise;
+  color: $white;
+  font-weight: bold;
+  padding: 13px 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 46px;
+}
+
+.no-discount {
+  width: 46px;
+  height: 46px;
+}
+
+.productsSection {
+  display: flex;
+}
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productContainer {
+  width: 18%;
+  height: 310px;
+  margin: 0 32px;
+  margin-bottom: 60px;
+}
+
+.productTitle {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: $fizzmod-darkest-grey;
+}
+
+aside {
+  width: 30%;
+}
+
+.card {
+  text-decoration: none;
+}
+
+.listPrice {
+  font-size: 13px;
+  text-decoration: line-through;
+  color: $fizzmod-medium-grey;
+}
+
+.productPrice {
+  color: $fizzmod-green;
+  font-size: 18px;
+  font-weight: bold;
+}
