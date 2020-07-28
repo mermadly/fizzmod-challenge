@@ -39,13 +39,28 @@ const Body = () => {
     getData();
   }, []);
 
+  let imageArray = [];
+
+  const arrayGenerator = () => {
+    console.log(slides);
+    const tempArr = [];
+
+    slides.forEach((slide) => {
+      tempArr.push(slide.imgName);
+    });
+    tempArr.push("Banner_4.png");
+    imageArray = tempArr;
+  };
+
+  arrayGenerator();
+
   useEffect(() => {
     sanitizer(products, filters);
   }, [filters]);
 
   return (
     <>
-      <Slider slides={slides}></Slider>
+      <Slider imageArray={imageArray}></Slider>
       <div className="productsMain">
         <h2 className="productsTitle">Productos</h2>
         <div className="productsSection">

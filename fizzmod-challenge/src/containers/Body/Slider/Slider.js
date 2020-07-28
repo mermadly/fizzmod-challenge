@@ -1,56 +1,36 @@
 import React, { useState } from "react";
 import "./Slider.scss";
+// import Banner4 from "../../../img/Banners/Banner_4.png";
+// import Banner5 from "../../../img/Banners/Banner_5.png";
 
-const Slider = (props) => {
+const Slider = ({ imageArray }) => {
   const [currentImageIdx, setCurrentImagIdx] = useState(0);
   //const [imageArray, setImageArray] = useState([]);
-  let imageArray = [];
 
-  const arrayGenerator = () => {
-    console.log(props.slides);
-    const tempArr = [];
-
-    props.slides.forEach((slide) => {
-      tempArr.push(slide.imgName);
-    });
-    imageArray = tempArr;
-  };
-
-  arrayGenerator();
-
-  const prevSlide = () => {
-    // find out whether currentImageIdx eqals 0 and thus user reached beginning of carousel
+  const previousSlide = () => {
     const resetToVeryBack = currentImageIdx === 0;
 
-    const index = resetToVeryBack
-      ? props.slides.length - 1
-      : currentImageIdx - 1;
+    const index = resetToVeryBack ? imageArray.length - 1 : currentImageIdx - 1;
 
-    // assign the logical index to current image index that will be used in render method
     setCurrentImagIdx(index);
   };
 
   const nextSlide = () => {
-    // check if we need to start over from the first index
-    const resetIndex = currentImageIdx === props.slides.length - 1;
+    const resetIndex = currentImageIdx === imageArray.length - 1;
 
     const index = resetIndex ? 0 : currentImageIdx + 1;
 
-    // assign the logical index to current image index that will be used in render method
     setCurrentImagIdx(index);
   };
 
-  // create a new array with 5 elements from the source images
   const activeImageSourcesFromState = imageArray.slice(
     currentImageIdx,
     currentImageIdx + 3
   );
 
-  // check the length of the new array (it’s less than 5 when index is at the end of the imagge sources array)
   const imageSourcesToDisplay =
     activeImageSourcesFromState.length < 3
-      ? // if the imageSourcesToDisplay's length is lower than 5 images than append missing images from the beginning of the original array
-        [
+      ? [
           ...activeImageSourcesFromState,
           ...imageArray.slice(0, 3 - activeImageSourcesFromState.length),
         ]
@@ -60,7 +40,7 @@ const Slider = (props) => {
     <div className="slider">
       <div className="sliderContent">
         <button
-          onClick={prevSlide}
+          onClick={previousSlide}
           className="icon-icn_chevron_left arrowLeft"
         ></button>
         <button

@@ -11,7 +11,6 @@ const Header = () => {
     //componentDidMount
     const getMenu = async () => {
       const response = await axios.get("http://remote.fizzmod.com/menu.json");
-      //   console.log(response);
       setCategoriesMenu(response.data.menu.categories);
     };
     getMenu();
