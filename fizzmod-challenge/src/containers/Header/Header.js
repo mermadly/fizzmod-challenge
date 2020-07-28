@@ -37,23 +37,25 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <form className="headerSearch">
+          <div className="headerSearch">
             <div className="searchBox">
-              <button type="submit" href="#">
-                <span className="searchIcon icon-icn_search"></span>
-              </button>
-              <input
-                placeholder="Buscar un producto.."
-                type="search"
-                name=""
-                id=""
-              />
+              <form>
+                <button type="submit" href="#">
+                  <span className="searchIcon icon-icn_search"></span>
+                </button>
+                <input
+                  placeholder="Buscar un producto.."
+                  type="search"
+                  name=""
+                  id=""
+                />
+              </form>
             </div>
             <a href="#" className="cart">
               <span className="icon-icn_cart icon"></span>
               <span>Mi carrito</span>
             </a>
-          </form>
+          </div>
         </div>
       </div>
       <Menu categories={categoriesMenu}></Menu>

@@ -1,10 +1,5 @@
 @import "../../../colorPalette.scss";
 
-.productsMain {
-  //Se superpone con el footer
-  height: 120vh;
-}
-
 .discount {
   background-color: $fizzmod-turquoise;
   color: $white;
@@ -13,6 +8,9 @@
   width: 46px;
   height: 46px;
   border-radius: 46px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .no-discount {
@@ -30,9 +28,14 @@
 
 .productContainer {
   width: 18%;
+  min-width: 210px;
   height: 310px;
   margin: 0 32px;
   margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
 .productTitle {

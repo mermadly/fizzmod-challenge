@@ -1,18 +1,43 @@
+@import "../../../colorPalette.scss";
+
 .slider {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
+  height: 400px;
+  width: auto;
 }
 
 .sliderContent {
   //transform: translateX(100%);
-  transition: transform ease-out 0.5s;
-  height: 100%;
-  width: 100%;
+  // transition: transform ease-out 0.5s;
+  height: 400px;
+  width: 100vw;
+  //overflow: hidden;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  position: relative;
 }
 
 .arrowLeft,
 .arrowRight {
+  color: $white;
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
   position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.arrowLeft {
+  left: 41px;
+}
+
+.arrowRight {
+  right: 41px;
 }

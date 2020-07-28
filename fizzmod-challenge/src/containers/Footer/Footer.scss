@@ -6,7 +6,8 @@ footer {
   color: $white;
   display: flex;
   justify-content: space-around;
-  padding: 0 200px;
+  align-items: flex-start;
+  padding: 75px 200px;
   width: 100%;
   font-size: 12px;
 }
@@ -17,11 +18,15 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   h6 {
+    margin: 0;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
     border-bottom: 2px solid $white;
     text-align: start;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    width: 123px;
   }
   ul {
     margin: 0;
@@ -40,5 +45,19 @@ footer {
   .icon {
     color: $white;
     font-size: 20px;
+  }
+}
+
+.footerLinks {
+  width: 130px;
+  display: flex;
+  justify-content: flex-start;
+  a {
+    text-decoration: none;
+  }
+  .icon {
+    color: $white;
+    font-size: 20px;
+    margin-left: 30px;
   }
 }

@@ -6,12 +6,8 @@ const Menu = (props) => {
     <div className="categoriesContainer">
       {props.categories.map((categorie) => {
         return (
-          <div className="categoryContainer">
-            <a
-              className="categoryTitles"
-              href={categorie.href}
-              key={categorie.title}
-            >
+          <div className="categoryContainer" key={categorie.title}>
+            <a className="categoryTitles" href={categorie.href}>
               {categorie.title}
             </a>
           </div>

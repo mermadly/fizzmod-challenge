@@ -17,10 +17,10 @@
 .categoryContainer {
   min-width: 256px;
   @media screen and (max-width: 480px) {
-    height: 25px;
+    height: 28px;
     width: 100%;
     border-bottom: 1px solid $fizzmod-white;
-    padding: 8px;
+    padding: 5px;
   }
 }
 

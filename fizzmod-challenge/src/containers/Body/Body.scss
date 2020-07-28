@@ -1,3 +1,31 @@
+@import "../../colorPalette.scss";
+
 aside {
   width: 25%;
+}
+
+.productsTitle {
+  margin: 0;
+  font-size: 36px;
+  line-height: 49px;
+  margin-bottom: 49px;
+  margin-top: 31px;
+  color: $fizzmod-darkest-grey;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.productsTitle::after,
+.productsTitle::before {
+  content: "";
+  border-top: 1px solid $fizzmod-medium-grey;
+  margin: 0 24px 0 0;
+  flex: 1 0 20px;
+}
+
+.productsTitle::after {
+  margin: 0 0 0 24px;
 }

@@ -56,9 +56,15 @@ const Footer = () => {
         </ul>
       </div>
       <div className="footerLinks">
-        <span className=".icon-icn_facebook icon">hola</span>
-        <span className=".icon-icn_twitter icon">hola</span>
-        <span className=".icon-icn_youtube icon">hola</span>
+        <a href="http://" target="_blank">
+          <span className="icon-icn_facebook icon"></span>
+        </a>
+        <a href="http://" target="_blank">
+          <span className="icon-icn_twitter icon"></span>
+        </a>
+        <a href="http://" target="_blank">
+          <span className="icon-icn_youtube icon"></span>
+        </a>
       </div>
     </footer>
   );
