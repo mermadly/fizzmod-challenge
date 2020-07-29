@@ -4,10 +4,10 @@ import "./Filters.scss";
 const Filters = ({ setFilters, filters, filterList }) => {
   const handleFilter = (e) => {
     if (e.target.checked) {
-      setFilters([...filters, e.target.name]);
+      setFilters([...filters, e.target.name]); //Si un checkbox fue seleccionado agrego el nombre del atributo a el estado de los filters
     } else {
-      const arr = filters.filter((word) => word !== e.target.name);
-      setFilters(arr);
+      const arr = filters.filter((word) => word !== e.target.name); // Sino, filtro los que no coinciden con el nombre del atributo del evento
+      setFilters(arr); //Seteo el estado con el nuevo array
     }
   };
 

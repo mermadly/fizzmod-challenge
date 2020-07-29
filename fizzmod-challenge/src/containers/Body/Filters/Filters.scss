@@ -82,18 +82,6 @@
   border-radius: 0.125rem;
 }
 
-.b-contain input[type="radio"] ~ .b-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0.87rem;
-  width: 0.87rem;
-  background: rgba(255, 255, 255, 1);
-  transition: background 250ms;
-  border: 1px solid rgba(30, 30, 30, 1);
-  border-radius: 2rem;
-}
-
 .b-contain input[type="checkbox"] ~ .b-input::after {
   content: "";
   position: absolute;
@@ -108,53 +96,18 @@
   transform: rotate(45deg);
 }
 
-.b-contain input[type="radio"] ~ .b-input::after {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 0.25rem;
-  top: 0.25rem;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 2rem;
-  background: rgba(255, 255, 255, 1);
-  transition: background 250ms;
-}
-
-.b-contain input:disabled ~ .b-input::after {
-  border-color: rgba(135, 149, 161, 1);
-}
-
 .b-contain input:checked ~ .b-input::after {
   display: block;
 }
 
 .b-contain input:checked ~ .b-input {
-  background: rgba(29, 183, 121, 1);
-  border-color: rgba(29, 183, 121, 1);
-}
-
-.b-contain input[type="checkbox"]:disabled ~ .b-input {
-  background: rgba(241, 245, 248, 1);
-  border-color: rgba(184, 194, 204, 1);
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.b-contain input[type="radio"]:disabled ~ .b-input {
-  background: rgba(241, 245, 248, 1);
-  border-color: rgba(184, 194, 204, 1);
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.b-contain input[type="radio"]:disabled ~ .b-input::after {
-  background: rgba(135, 149, 161, 1);
+  background: $fizzmod-green;
+  border-color: $fizzmod-green;
 }
 
 .b-contain input:checked:focus ~ .b-input,
 .b-contain:hover input:not([disabled]):checked ~ .b-input {
-  background: rgba(29, 183, 121, 1);
+  background: $fizzmod-green;
   border-color: rgba(255, 255, 255, 1);
 }
 
@@ -173,21 +126,6 @@
   opacity: 0.6;
   z-index: 99999;
   transform: scale(0);
-}
-
-@keyframes b-ripple {
-  0% {
-    transform: scale(0);
-  }
-
-  20% {
-    transform: scale(1);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
 }
 
 .b-contain .b-input::before {
