@@ -4,6 +4,13 @@ aside {
   width: 25%;
 }
 
+.productsSection {
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .productsTitle {
   margin: 0;
   font-size: 36px;

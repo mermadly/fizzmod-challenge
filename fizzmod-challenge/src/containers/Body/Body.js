@@ -31,7 +31,8 @@ const Body = () => {
     //componentDidMount
     const getData = async () => {
       const response = await axios.get("http://remote.fizzmod.com/body.json");
-      setSlides(response.data.slides);
+      const extraBanner = { imgName: "Banner_4.png", href: "#banner-4" };
+      setSlides([...response.data.slides, extraBanner]);
       setProducts(response.data.products);
       setFilterList(response.data.filters);
       setFilteredProducts(response.data.products);
@@ -39,28 +40,13 @@ const Body = () => {
     getData();
   }, []);
 
-  let imageArray = [];
-
-  const arrayGenerator = () => {
-    console.log(slides);
-    const tempArr = [];
-
-    slides.forEach((slide) => {
-      tempArr.push(slide.imgName);
-    });
-    tempArr.push("Banner_4.png");
-    imageArray = tempArr;
-  };
-
-  arrayGenerator();
-
   useEffect(() => {
     sanitizer(products, filters);
   }, [filters]);
 
   return (
-    <>
-      <Slider imageArray={imageArray}></Slider>
+    <div className="body">
+      <Slider imageArray={slides}></Slider>
       <div className="productsMain">
         <h2 className="productsTitle">Productos</h2>
         <div className="productsSection">
@@ -74,7 +60,7 @@ const Body = () => {
           <Productos products={filteredProducts}></Productos>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

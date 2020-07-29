@@ -5,36 +5,20 @@ import "./Slider.scss";
 
 const Slider = ({ imageArray }) => {
   const [currentImageIdx, setCurrentImagIdx] = useState(0);
-  //const [imageArray, setImageArray] = useState([]);
 
   const previousSlide = () => {
-    const resetToVeryBack = currentImageIdx === 0;
-
-    const index = resetToVeryBack ? imageArray.length - 1 : currentImageIdx - 1;
+    const index =
+      currentImageIdx === 0 ? imageArray.length - 1 : currentImageIdx - 1;
 
     setCurrentImagIdx(index);
   };
 
   const nextSlide = () => {
-    const resetIndex = currentImageIdx === imageArray.length - 1;
-
-    const index = resetIndex ? 0 : currentImageIdx + 1;
+    const index =
+      currentImageIdx === imageArray.length - 1 ? 0 : currentImageIdx + 1;
 
     setCurrentImagIdx(index);
   };
-
-  const activeImageSourcesFromState = imageArray.slice(
-    currentImageIdx,
-    currentImageIdx + 3
-  );
-
-  const imageSourcesToDisplay =
-    activeImageSourcesFromState.length < 3
-      ? [
-          ...activeImageSourcesFromState,
-          ...imageArray.slice(0, 3 - activeImageSourcesFromState.length),
-        ]
-      : activeImageSourcesFromState;
 
   return (
     <div className="slider">
@@ -47,15 +31,16 @@ const Slider = ({ imageArray }) => {
           onClick={nextSlide}
           className="icon-icn_chevron_right arrowRight"
         ></button>
-        {imageSourcesToDisplay.map((slide) => {
-          return (
-            <div className="slide" key={slide.imgName}>
-              <a className="link" href={slide.href}>
-                <img src={require(`../../../img/Banners/${slide}`)} alt="" />
-              </a>
-            </div>
-          );
-        })}
+        {imageArray.length !== 0 && (
+          <div className="slide">
+            <a className="link" href={imageArray[currentImageIdx].href}>
+              <img
+                src={require(`../../../img/Banners/${imageArray[currentImageIdx].imgName}`)}
+                alt=""
+              />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

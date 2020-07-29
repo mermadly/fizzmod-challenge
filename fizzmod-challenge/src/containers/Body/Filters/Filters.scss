@@ -17,7 +17,13 @@
   width: 200px;
   margin-left: 21px;
   color: $fizzmod-darkest-grey;
+  @media screen and (max-width: 480px) {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+  }
 }
+
 .filterOptions,
 .filterItem {
   margin: 0;
